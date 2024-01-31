@@ -14,18 +14,25 @@
     <!--You can have multiple headers in html-->
     <header class="primary-header">
       <div class="container">
-        <a href="#"><img src="images/mountain2.svg" alt="logo"></a>
-        <!--You can have multiple navs in html-->
-        <nav class="primary-navigation">
-          <ul role="list" class="nav-list">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Hikes</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">2 Home</a></li>
-            <li><a href="#">3 home</a></li>
-          </ul>
-        </nav>
-        <button class="button">Get hiking</button>
+        <div class="nav-wrapper">
+          <a href="#"><img src="images/mountain2.svg" alt="logo" id="logo"></a>
+          <button class="mobile-nav" aria-controls="primary-navigation" aria-expanded="false">
+            <img class="burger-bar" src="images/burger1.svg" alt="" aria-hidden="true">
+            <img class="burger-open" src="images/burger2.svg" alt="" aria-hidden="true">
+            <span class="visually-hidden">Menu</span>
+          </button>
+          <!--You can have multiple navs in html-->
+          <nav class="primary-navigation" id="primary-navigation">
+            <ul role="list" class="nav-list">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Hikes</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">2 Home</a></li>
+              <li><a href="#">3 home</a></li>
+            </ul>
+          </nav>
+          <button class="button | display-sm-none display-md-inline-flex">Get hiking</button>
+        </div>
       </div>
     </header>
 
@@ -39,7 +46,7 @@
               <button class="button">Get hiking</button>
             </div>
             <div>
-              <img src="images/image1.png" alt="vno logo">
+              <img src="images/team.jpg" alt="vno logo">
             </div>
           </div>
         </div>
