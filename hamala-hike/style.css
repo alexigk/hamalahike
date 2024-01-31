@@ -368,3 +368,22 @@ body{
     grid-auto-columns: 1fr;
   }
 }
+
+#image{
+  position: relative;
+  isolation: isolate;
+}
+
+#image::before{
+  content: "";
+
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image: url("images/forest5.jpg");
+  opacity: 0.3;
+  background-repeat: no-repeat;
+  background-position-x: 10px;
+  background-position-y: 100px;
+  background-size: cover;
+}
