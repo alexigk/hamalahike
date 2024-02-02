@@ -169,6 +169,11 @@ body{
   width: 150px;
 }
 
+.logo{
+  margin-left: -52px;
+  fill: var(--clr-primary-300);
+}
+
 .burger-bar,
 .burger-open{
  height: 50px;
@@ -263,6 +268,104 @@ body{
   }
 
   .mobile-nav .burger-open{
+    display: none;
+  }
+}
+
+/*footer*/
+#mount2{
+  color: white;
+}
+
+input{
+  border-radius: 10%;
+}
+
+.footer-nav{
+  columns: 2;
+}
+
+.footer-nav a{
+  color: white ;
+  text-decoration: none;
+}
+
+.footer-nav a:where(:hover, :focus){
+  color: rgb(62, 96, 71);
+  text-decoration: none;
+}
+
+.social-list{
+  display: flex;
+  margin-left: var(--size-100);
+  margin-top: var(--size-200);
+  gap: var(--size-300);
+}
+
+.social-icon{
+  width: var(--size-600);
+  aspect-ratio: 1;
+  fill: aliceblue;
+}
+
+.social-list a:is(:hover, :focus) .social-icon{
+  fill: rgb(43, 86, 49);
+}
+
+.icon{
+  width: 80px;
+  height: 80px;
+  fill: white;
+}
+
+@media (max-width: 50em){
+  .social-icon{
+    width: var(--size-500);
+  }
+
+  .primary-footer-wrapper {
+    justify-content: center;
+    display: grid;
+    grid-template-areas:
+    "form"
+    "nav"
+    "logo-social";
+  }
+
+  .primary-footer-wrapper > :nth-child(1){
+    grid-area: logo-social;
+  }
+
+  .primary-footer-wrapper > :nth-child(2){
+    grid-area: nav;
+  }
+
+  .primary-footer-wrapper > :nth-child(3){
+    grid-area: form;
+  }
+
+  .footer-nav{
+    gap: 120px;
+    padding: 20px;
+  }
+
+  form{
+    text-align: center;
+  }
+
+  .icon{
+    margin: auto;
+    height: 100px;
+    width: 100px;
+  }
+
+  .social-list{
+    margin-left: 80px;
+    gap: var(--size-600);
+    padding-top: 10px;
+  }
+
+  .copyright{
     display: none;
   }
 }
